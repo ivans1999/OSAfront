@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/index.js"></script>
+      
+    <title>Delivery</title>  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="css/main.css">
+    <script>
+			$(document).ready(getIndex);
+	</script>
+  </head>
+  <body>  
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                 <div class="collapse navbar-collapse" id="navigation">
+                    <nav>
+                        <ul class="nav navbar-nav navbar-right">
+	                     	<li><a href="#" id="add">Registracija</a></li>
+	                        <li><a href="articles.html">Prikaz artikala</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <h2>Dobrodosli na nasu stranicu,u okviru nje imate mogucnost registracije kao i prikaza artikala.</h2>
+        <div class="navbar">
+            <div class="container">
+              <div id="menu" style="display:none;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>               
+                </div>       
+               </div>   
+             </div>      
+        </div>
+      
+<div class="responsive">        
+	<div class="gallery">
+  	<a target="_blank" href="articles.html">
+    	<img src="images/7up.jpg" alt="7up" width="600" height="400">
+  	</a>
+  	<div class="desc">7up</div>
+	</div>
+</div>
+<div class="responsive">        
+	<div class="gallery">
+  	<a target="_blank" href="articles.html">
+    	<img src="images/pepsi.jpg" alt="Pepsi" width="600" height="400">
+  	</a>
+  	<div class="desc">Pepsi</div>
+	</div>
+</div>
+
+<div class="responsive">        
+	<div class="gallery">
+  	<a target="_blank" href="articles.html">
+    	<img src="images/kroasan.jpg" alt="Kroasan" width="600" height="400">
+  	</a>
+  	<div class="desc">7days kroasan</div>
+	</div>
+</div>
+<div class="responsive">        
+	<div class="gallery">
+  	<a target="_blank" href="articles.html">
+    	<img src="images/cokolada.jpg" alt="Cokolada" width="600" height="400">
+  	</a>
+  	<div class="desc">Milka cokolada</div>
+	</div>
+</div>
+        
+        
+        	
+			<div class="modal fade" id="addModalScrollable" tabindex="-1" role="dialog" aria-labelledby="addModalScrollableTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-scrollable" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="addModalScrollableTitle">Registracija</h5>
+			        <button type="button" class="close addModalClose" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+			          <div class="form-group" id="korisnici">
+					    <label for="korisniciSelect">Izaberite korisnika koga zelite da registrujete</label>
+					    <select class="form-control"  id="korisniciSelect">			
+					    <option value="SELLER">Prodavac</option>
+					    <option value="CUSTOMER">Kupac</option>		    
+					    </select>
+					    <button id="usersFields">Izaberite</button>
+					  </div>
+					  <div class="form-group" id="imeInput2">
+					    <label for="imeInput">Ime</label>
+					    <input type="text" class="form-control" id="imeInput" aria-describedby="imeHelp" placeholder="Unesite ime">
+					  </div>
+					  <div class="form-group" id="prezimeInput2">
+					    <label for="prezimeInput">Prezime</label>
+					    <input type="text" class="form-control" id="prezimeInput" aria-describedby="prezimeHelp" placeholder="Unesite prezime">
+					  </div>
+					  <div class="form-group" id="korImeInput2">
+					    <label for="korImeInput">Korisnicko ime</label>
+					    <input type="text" class="form-control" id="korImeInput" aria-describedby="korImeHelp" placeholder="Unesite korisnicko ime">
+					  </div>
+					  <div class="form-group" id="lozinkaInput2">
+					    <label for="lozinkaInput">Lozinka</label>
+					    <input type="text" class="form-control" id="lozinkaInput" aria-describedby="lozinkaHelp" placeholder="Unesite lozinku">
+					  </div>
+					  <div class="form-group" id="datumInput2">
+					    <label for="datumInput">Posluje od</label>
+					    <input type="date" class="form-control" id="datumInput" aria-describedby="datumHelp" placeholder="Unesite datum">
+					  </div>
+					  <div class="form-group" id="emailInput2">
+					    <label for="emailInput">Email</label>
+					    <input type="text" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Unesite email">
+					  </div>
+					  <div class="form-group" id="adresaInput2">
+					    <label for="adresaInput">Adresa</label>
+					    <input type="text" class="form-control" id="adresaInput" aria-describedby="adresaHelp" placeholder="Unesite adresu">
+					  </div>
+					  <div class="form-group" id="nazivInput2">
+					    <label for="nazivInput">Naziv</label>
+					    <input type="text" class="form-control" id="nazivInput" aria-describedby="nazivHelp" placeholder="Unesite naziv">
+					  </div>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary addModalClose" >Otkaži</button>
+			        <button type="button" id="doAdd" class="btn btn-primary">Sačuvaj</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		
+
+    </header>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
